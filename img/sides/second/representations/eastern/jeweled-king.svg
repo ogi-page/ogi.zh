@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <title>玉</title>
+  <g fill-rule="evenodd">
+    <path d="m6.1426 49.005h37.715l-6.3481-45.745-12.51-2.2497-12.51 2.2497-6.3475 45.745z" color="#000000" fill="#fff" style="-inkscape-stroke:none"/>
+    <path d="m25-0.0058594-13.4 2.4102-6.6055 47.602h40.012l-6.6055-47.602zm0 2.0312 11.619 2.0898 6.0898 43.891h-35.418l6.0898-43.891z" color="#000000" style="-inkscape-stroke:none"/>
+  </g>
+  <text x="11.599833" y="38.080276" font-family="'Noto Serif JP'" font-size="26.667px" font-weight="600" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="11.599833" y="38.080276">玉</tspan></text>
+</svg>

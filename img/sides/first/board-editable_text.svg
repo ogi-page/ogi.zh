@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>Ogi board</title>
+  <rect x=".15" y=".15" width="79.7" height="79.7" fill="#cd853f" stroke="#000" stroke-width=".3"/>
+  <g fill="#ffcc99" font-size="2.1204px" font-weight="bold" stroke-width=".79515">
+    <g font-family="Arial">
+      <text x="74.498886" y="1.9520375" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="74.498886" y="1.9520375" fill="#ffcc99" stroke-width=".63227">1</tspan></text>
+      <text x="54.416061" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="54.416061" y="1.9519482" fill="#ffcc99" stroke-width=".63227">3</tspan></text>
+      <text x="34.395355" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="34.395355" y="1.9519482" fill="#ffcc99" stroke-width=".63227">5</tspan></text>
+      <text x="14.412438" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="14.412438" y="1.9519482" fill="#ffcc99" stroke-width=".63227">7</tspan></text>
+      <text x="4.4150262" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="4.4150262" y="1.9519482" fill="#ffcc99" stroke-width=".63227">8</tspan></text>
+      <text x="24.40312" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="24.40312" y="1.9519482" fill="#ffcc99" stroke-width=".63227">6</tspan></text>
+      <text x="44.415028" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="44.415028" y="1.9519482" fill="#ffcc99" stroke-width=".63227">4</tspan></text>
+      <text x="64.437286" y="1.9519482" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="64.437286" y="1.9519482" fill="#ffcc99" stroke-width=".63227">2</tspan></text>
+    </g>
+    <g font-family="'Noto Serif JP'">
+      <text x="77.445824" y="5.9838657" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="5.9838657" stroke-width=".79515">一</tspan></text>
+      <text x="77.445824" y="25.876785" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="25.876785" stroke-width=".79515">三</tspan></text>
+      <text x="77.445824" y="45.832256" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="45.832256" stroke-width=".79515">五</tspan></text>
+      <text x="77.445824" y="65.838615" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="65.838615" stroke-width=".79515">七</tspan></text>
+      <text x="77.445824" y="15.868304" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="15.868304" stroke-width=".79515">二</tspan></text>
+      <text x="77.445824" y="35.764404" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="35.764404" stroke-width=".79515">四</tspan></text>
+      <text x="77.445824" y="55.837559" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="55.837559" stroke-width=".79515">六</tspan></text>
+      <text x="77.445824" y="75.79409" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="77.445824" y="75.79409" stroke-width=".79515">八</tspan></text>
+    </g>
+  </g>
+  <g fill="none" stroke="#000" stroke-width=".30038">
+    <path d="m10.05 0.14962v79.7"/>
+    <path d="m20.05 0.14962v79.7"/>
+    <path d="m30.05 0.14962v79.7"/>
+    <path d="m40.05 0.14962v79.7"/>
+    <path d="m60.05 0.14962v79.7"/>
+    <path d="m50.05 0.14962v79.7"/>
+    <path d="m70.05 0.14962v79.7"/>
+    <path d="m79.9 9.9996h-79.7"/>
+    <path d="m79.9 20h-79.7"/>
+    <path d="m79.9 30h-79.7"/>
+    <path d="m79.9 40h-79.7"/>
+    <path d="m79.9 60h-79.7"/>
+    <path d="m79.9 50h-79.7"/>
+    <path d="m79.9 70h-79.7"/>
+  </g>
+</svg>

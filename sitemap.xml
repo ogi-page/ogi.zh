@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://zh.ogi.page/</loc>
+    <lastmod>2024-03-26</lastmod>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/ogi-starting-setup-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/ogi-starting-setup-small.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/ogi-starting-setup-fallback.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/komayo-moonlit-ogi-game-legend-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/komayo-moonlit-ogi-game-legend-small.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/img/komayo-moonlit-ogi-game-legend-fallback.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://zh.ogi.page/favicon.svg</image:loc>
+    </image:image>
+  </url>
+</urlset>
