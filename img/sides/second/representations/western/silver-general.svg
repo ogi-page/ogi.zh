@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 4096 4096" xmlns="http://www.w3.org/2000/svg">
+  <title>Ogi Sente Silver General</title>
+
+  <g transform="rotate(180 2048 2048)">
+    <polygon points="2048 364 3270 937 3620 3964 476 3964 826 937" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="148"/>
+
+    <g transform="translate(405.74 70.362)" stroke="#0d0000">
+      <path d="m830.18 3232.5 634.59-818.62-634.59-818.62 706.34 556.22 108.19-889.49 107.87 886.13 701.86-552.84-634.74 818.62 634.74 818.62-812.13-639.83z" fill-opacity="0" stroke-width="103.1"/>
+
+      <g transform="matrix(81.837 0 0 81.837 -403.67 .4641)" fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2598">
+        <path d="m16.606 40.754a1.9657 1.9814 0 0 0-2.7799-2.8022 1.9657 1.9814 0 1 0 2.7799 2.8022z"/>
+        <path d="m36.175 21.027a1.9657 1.9814 0 0 1-2.7799-2.8022 1.9657 1.9814 0 1 1 2.7799 2.8022z"/>
+        <path d="m13.825 21.027a1.9657 1.9814 0 0 0 2.7799-2.8022 1.9657 1.9814 0 1 0-2.7799 2.8022z"/>
+        <path d="m33.395 40.754a1.9657 1.9814 0 0 1 2.7799-2.8022 1.9657 1.9814 0 1 1-2.7799 2.8022z"/>
+        <path d="m26.995 15.611a1.9657 1.9814 0 0 1-3.9314 0 1.9657 1.9814 0 1 1 3.9314 0z"/>
+      </g>
+    </g>
+  </g>
+</svg>

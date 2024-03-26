@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="https://schema.org/Game">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>日本王棋（Ōgi）— 源自将棋的策略棋类游戏</title>
+
+    <!-- Basic document metadata -->
+    <meta name="author" content="Cyril Veltin">
+    <meta name="description"
+          content="日本王棋（Ōgi），又称王之棋或公主之棋，是一款源自将棋的现代策略棋类游戏，采用可翻转棋子和打入规则，在8×8棋盘上进行对弈。">
+    <meta name="keywords"
+          content="日本王棋, Ōgi, 王棋, 策略游戏, 将棋, 打入, 可翻转棋子">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- License metadata -->
+    <meta name="dcterms.rights" content="CC0 1.0 Universal">
+    <meta name="dcterms.license" content="https://creativecommons.org/publicdomain/zero/1.0/">
+    <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <meta name="license" content="CC0">
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="日本王棋">
+    <meta property="og:title" content="日本王棋（Ōgi）— 源自将棋的策略棋类游戏">
+    <meta property="og:description"
+          content="日本王棋（Ōgi）是一款源自将棋的现代策略棋类游戏，结合可翻转棋子和打入规则，在8×8棋盘上进行对弈。">
+    <meta property="og:url" content="https://zh.ogi.page/">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="th_TH">
+
+    <meta property="og:image" content="https://zh.ogi.page/img/ogi-starting-setup-large.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="828">
+    <meta property="og:image:height" content="828">
+    <meta property="og:image:alt" content="日本王棋对局初始布局">
+
+    <meta property="og:image" content="https://zh.ogi.page/img/ogi-starting-setup-small.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="日本王棋对局初始布局">
+
+    <meta property="og:image" content="https://zh.ogi.page/img/ogi-starting-setup-fallback.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="828">
+    <meta property="og:image:height" content="828">
+    <meta property="og:image:alt" content="日本王棋对局初始布局">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://zh.ogi.page/img/ogi-starting-setup-large.webp">
+    <meta name="twitter:image:alt" content="日本王棋对局初始布局">
+    <meta name="twitter:title" content="日本王棋（Ōgi）— 策略棋类游戏">
+    <meta name="twitter:description"
+          content="源自将棋的现代策略棋类游戏，采用可翻转棋子和打入规则。">
+
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="x-default" href="https://ogi.page/">
+    <link rel="alternate" hreflang="fr" href="https://fr.ogi.page/">
+    <link rel="alternate" hreflang="en" href="https://en.ogi.page/">
+    <link rel="alternate" hreflang="ja" href="https://ja.ogi.page/">
+    <link rel="alternate" hreflang="th" href="https://th.ogi.page/">
+    <link rel="alternate" hreflang="zh" href="https://zh.ogi.page/">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zh.ogi.page/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Ōgi Page">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/props.css" media="all">
+    <link rel="stylesheet" href="css/all.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/screen.css" media="screen">
+
+    <!-- Theme color adaptatif -->
+    <meta name="theme-color" content="MistyRose" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#010005" media="(prefers-color-scheme: dark)">
+
+    <!-- Structured data (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "@id": "https://zh.ogi.page/#game",
+        "name": "日本王棋",
+        "alternateName": [
+          "Ōgi",
+          "王棋",
+          "王之棋",
+          "公主之棋"
+        ],
+        "description": "日本王棋（Ōgi）是一款源自将棋的现代策略棋类游戏，采用可翻转棋子和打入规则，在8×8棋盘上进行对弈。",
+        "url": "https://zh.ogi.page/",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://zh.ogi.page/"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://zh.ogi.page/img/ogi-starting-setup-large.webp",
+          "width": 828,
+          "height": 828
+        },
+        "inLanguage": "zh",
+        "genre": ["策略游戏", "抽象策略游戏"],
+        "numberOfPlayers": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 2
+        },
+        "gameItem": [
+          "8×8棋盘（64格）",
+          "2枚王将（或玉将）",
+          "2枚公主",
+          "2枚飞车",
+          "2枚角行",
+          "4枚银将",
+          "4枚桂马",
+          "4枚香车",
+          "16枚步兵"
+        ],
+        "isBasedOn": {
+          "@type": "Game",
+          "name": "将棋",
+          "sameAs": "https://www.wikidata.org/wiki/Q131375"
+        },
+        "keywords": "日本王棋, Ōgi, 王棋, 策略游戏, 将棋, 打入, 可翻转棋子, 8×8棋盘, 棋魅女",
+        "creator": {
+          "@type": "Person",
+          "name": "Cyril Veltin",
+          "url": "https://cyrilvelt.in/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "日本王棋项目"
+        },
+        "datePublished": "2024-03-26",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "copyrightNotice": "公共领域",
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Cyril Veltin"
+        },
+        "sameAs": [
+          "https://en.ogi.page/",
+          "https://fr.ogi.page/",
+          "https://ja.ogi.page/",
+          "https://th.ogi.page/"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img src="favicon.svg" alt="日本王棋标志" height="1024" width="1024">
+      <strong title="王棋">日本王棋</strong>
+    </header>
+
+    <article>
+      <header>
+        <h1>王之棋</h1>
+
+        <p>
+          <strong>日本王棋</strong>（Ōgi）是一款源自<em>将棋</em>（日本象棋）的现代<strong>策略棋类游戏</strong>。
+          它保留了<strong>可翻转棋子</strong>（升变）和通过<em>打入</em>将<strong>被吃掉的棋子重新投入棋盘</strong>的规则，
+          同时将其调整为<strong>8×8棋盘</strong>并引入了一枚特殊棋子。
+        </p>
+
+        <p>
+          Ōgi的日文写作<ruby lang="ja">王<rp>(</rp><rt>ō</rt><rp>)</rp></ruby><ruby lang="ja">棋<rp>(</rp><rt>gi</rt><rp>)</rp></ruby>，
+          字面意思是<q>王之棋</q>。
+          在玩家社区中，它也被称为<q><a href="https://zh.komayo.page/youxi/" hreflang="zh" rel="external related" title="公主之棋">公主之棋</a></q>，
+          这与围绕该游戏的民间传说有关。
+        </p>
+      </header>
+
+      <nav aria-label="目录">
+        <h2>目录</h2>
+
+        <ol>
+          <li><a href="#youxi-zujian">游戏组件</a></li>
+          <li><a href="#youxi-guize">游戏规则</a></li>
+          <li><a href="#wenhua-xushi-yu-dushi-chuanshuo">文化叙事与都市传说</a></li>
+        </ol>
+      </nav>
+
+      <section id="youxi-zujian">
+        <h2>游戏组件</h2>
+
+        <p>
+          日本王棋由两名玩家面对面在8×8（共64格）的棋盘上进行对弈。
+          按照日本棋类游戏的传统，两位玩家分别称为
+          <ruby>先手<rp>(</rp><rt>Sente</rt><rp>)</rp></ruby>（先行方）和
+          <ruby>後手<rp>(</rp><rt>Gote</rt><rp>)</rp></ruby>（后行方）。
+        </p>
+
+        <p>
+          在西方，先手和后手通常被称为<i>黑方</i>和<i>白方</i>，
+          黑方先行。
+        </p>
+
+        <p>
+          每位玩家开局时拥有18枚棋子。
+          这些棋子呈扁平状，为不规则五边形，形似箭头。
+          棋子有多种略有不同的尺寸。
+          双方棋子外观完全相同：仅通过朝向对方阵营的尖端来区分棋子的归属。
+          棋子按重要性（尺寸）从大到小排列如下：
+        </p>
+
+        <ul>
+          <li>1枚王将</li>
+          <li>1枚公主</li>
+          <li>1枚飞车</li>
+          <li>1枚角行</li>
+          <li>2枚银将</li>
+          <li>2枚桂马</li>
+          <li>2枚香车</li>
+          <li>8枚步兵</li>
+        </ul>
+
+        <p>
+          每枚棋子正面用黑墨书写其汉字名称。
+          除王将外，每枚棋子背面还刻有另一个汉字，代表其升变后的状态。
+          当棋子在对局中被翻转至背面时，表示该棋子已升变，获得了不同的移动能力。
+        </p>
+
+        <p>
+          以飞车为例：
+        </p>
+
+        <dl class="pieces">
+          <dt>未升变面（正面）</dt>
+          <dd>
+            <figure>
+              <img data-style="ogi" class="piece"
+                  src="img/sides/first/representations/eastern/rook.svg"
+                  alt="飞车，未升变面">
+              <figcaption>未升变状态的飞车</figcaption>
+            </figure>
+          </dd>
+
+          <dt>升变面（背面）</dt>
+          <dd>
+            <figure>
+              <img data-style="ogi" class="piece"
+                  src="img/sides/first/representations/eastern/promoted-rook.svg"
+                  alt="龙王，升变面">
+              <figcaption>升变状态的飞车</figcaption>
+            </figure>
+          </dd>
+        </dl>
+
+        <p>
+          王将可以用两个汉字表示：<code lang="ja">王</code>和<code lang="ja">玉</code>——
+          但它们是<strong>同一种棋子</strong>（规则和走法相同），只是表示方式不同。
+          通常，<code lang="ja">王</code>由段位较高的玩家（或卫冕冠军）使用，
+          而<code lang="ja">玉</code>由段位较低的玩家（或挑战者）使用。
+          因此，这一选择取决于玩家之间的<strong>相对地位</strong>。
+          传统上，在让子棋中，段位较低的玩家（<ruby lang="ja">下手<rp>(</rp><rt lang="ja-Latn">shitate</rt><rp>)</rp></ruby>）执<code lang="ja">玉</code>并先行（先手），
+          而段位较高的玩家（<ruby lang="ja">上手<rp>(</rp><rt lang="ja-Latn">uwate</rt><rp>)</rp></ruby>）执<code lang="ja">王</code>并后行（后手）。
+          在同级别玩家的对局中，这一区分通常被忽略或随机分配。
+        </p>
+
+        <p>
+          下表列出了所有棋子及其名称、棋子上使用的日文汉字，
+          以及记谱缩写（升变形式以<code>+</code>为前缀）。
+          图片展示了两种可用的表示风格。
+        </p>
+
+        <table class="pieces">
+          <caption>
+            棋子
+          </caption>
+
+          <colgroup>
+            <col>
+            <col span="4">
+            <col span="4">
+          </colgroup>
+
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">名称</th>
+              <th scope="colgroup" colspan="4">未升变</th>
+              <th scope="colgroup" colspan="4">升变后</th>
+            </tr>
+
+            <tr>
+              <th scope="col">缩写</th>
+              <th scope="col">汉字</th>
+              <th scope="col">图示（东方风格）</th>
+              <th scope="col">图示（西方风格）</th>
+
+              <th scope="col">缩写</th>
+              <th scope="col">汉字</th>
+              <th scope="col">图示（东方风格）</th>
+              <th scope="col">图示（西方风格）</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- 王将 (王) -->
+            <tr>
+              <th scope="row">王将</th>
+              <td><code>K</code></td>
+              <td><code lang="ja">王</code></td>
+              <td>
+                <img data-style="ogi" class="piece"
+                    src="img/sides/first/representations/eastern/king.svg"
+                    alt="王将（王，东方风格）">
+              </td>
+              <td>
+                <img data-style="ogi" class="piece"
+                    src="img/sides/first/representations/western/king.svg"
+                    alt="王将（西方风格）">
+              </td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+            </tr>
+
+            <!-- 玉将 (玉) -->
+            <tr>
+              <th scope="row">玉将</th>
+              <td><code>K</code></td>
+              <td><code lang="ja">玉</code></td>
+              <td>
+                <img data-style="ogi" class="piece"
+                    src="img/sides/first/representations/eastern/jeweled-king.svg"
+                    alt="玉将（玉，东方风格）">
+              </td>
+              <td>
+                <img data-style="ogi" class="piece"
+                    src="img/sides/first/representations/western/king.svg"
+                    alt="玉将（西方风格）">
+              </td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+              <td aria-label="不适用">—</td>
+            </tr>
+
+            <tr>
+              <th scope="row">公主</th>
+              <td><code>I</code></td>
+              <td><code lang="ja">姫</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/princess.svg" alt="公主（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/princess.svg" alt="公主（西方风格）"></td>
+              <td><code>+I</code></td>
+              <td><code lang="ja">神</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-princess.svg" alt="升变公主（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-princess.svg" alt="升变公主（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">飞车</th>
+              <td><code>R</code></td>
+              <td><code lang="ja">飛</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/rook.svg" alt="飞车（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/rook.svg" alt="飞车（西方风格）"></td>
+              <td><code>+R</code></td>
+              <td><code lang="ja">龍</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-rook.svg" alt="龙王（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-rook.svg" alt="龙王（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">角行</th>
+              <td><code>B</code></td>
+              <td><code lang="ja">角</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/bishop.svg" alt="角行（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/bishop.svg" alt="角行（西方风格）"></td>
+              <td><code>+B</code></td>
+              <td><code lang="ja">馬</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-bishop.svg" alt="龙马（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-bishop.svg" alt="龙马（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">银将</th>
+              <td><code>S</code></td>
+              <td><code lang="ja">銀</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/silver-general.svg" alt="银将（西方风格）"></td>
+              <td><code>+S</code></td>
+              <td><code lang="ja">全</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-silver-general.svg" alt="升变银将（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-silver-general.svg" alt="升变银将（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">桂马</th>
+              <td><code>N</code></td>
+              <td><code lang="ja">桂</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/knight.svg" alt="桂马（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/knight.svg" alt="桂马（西方风格）"></td>
+              <td><code>+N</code></td>
+              <td><code lang="ja">圭</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-knight.svg" alt="升变桂马（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-knight.svg" alt="升变桂马（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">香车</th>
+              <td><code>L</code></td>
+              <td><code lang="ja">香</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/lance.svg" alt="香车（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/lance.svg" alt="香车（西方风格）"></td>
+              <td><code>+L</code></td>
+              <td><code lang="ja">杏</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-lance.svg" alt="升变香车（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-lance.svg" alt="升变香车（西方风格）"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">步兵</th>
+              <td><code>P</code></td>
+              <td><code lang="ja">歩</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/pawn.svg" alt="步兵（西方风格）"></td>
+              <td><code>+P</code></td>
+              <td><code lang="ja">と</code></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/eastern/promoted-pawn.svg" alt="升变步兵（东方风格）"></td>
+              <td><img data-style="ogi" class="piece" src="img/sides/first/representations/western/promoted-pawn.svg" alt="升变步兵（西方风格）"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="youxi-guize">
+        <h2>游戏规则</h2>
+
+        <h3>目标</h3>
+
+        <p>
+          游戏的目标是通过<strong>吃掉对方王将</strong>来赢得对局，
+          或通过规则规定的其他终局条件获胜（例如对方认输）。
+        </p>
+
+        <p>
+          当某一局面使王将被吃不可避免时，无论如何防守都无法挽救，称为<strong>将死</strong>。
+        </p>
+
+        <h3>布局</h3>
+
+        <p>
+          对局开始时，双方将各自的棋子摆放在棋盘上，
+          每枚棋子的尖端朝向对方阵营。
+        </p>
+
+        <p>
+          初始布局如下：
+        </p>
+
+        <table class="squares">
+          <caption>
+            日本王棋对局初始布局。
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"><img class="piece" draggable="true" data-code="o:l" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="b8"><img class="piece" draggable="true" data-code="o:n" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="c8"><img class="piece" draggable="true" data-code="o:s" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d8"><img class="piece" draggable="true" data-code="o:i" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e8"><img class="piece" draggable="true" data-code="o:k^" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square" data-coordinate="f8"><img class="piece" draggable="true" data-code="o:s" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="g8"><img class="piece" draggable="true" data-code="o:n" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="h8"><img class="piece" draggable="true" data-code="o:l" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/lance.svg" alt="香车"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"><img class="piece" draggable="true" data-code="o:r" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/rook.svg" alt="飞车"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"><img class="piece" draggable="true" data-code="o:b" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/bishop.svg" alt="角行"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="b6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="d6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="e6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="g6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="h6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="b3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="d3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="e3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="f3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="g3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="h3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"><img class="piece" draggable="true" data-code="O:B" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/bishop.svg" alt="角行"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"><img class="piece" draggable="true" data-code="O:R" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/rook.svg" alt="飞车"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="b1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="c1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d1"><img class="piece" draggable="true" data-code="O:I" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e1"><img class="piece" draggable="true" data-code="O:K^" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square" data-coordinate="f1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="g1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="h1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          除非另有说明，棋盘图均从先手视角展示，先手位于图的下方。
+          列从左到右标记为<code>a</code>至<code>h</code>，行从下到上（从先手视角）标记为<code>1</code>至<code>8</code>。
+          在走法示意图中，高亮显示的格子表示该棋子可移动到的目标位置（移动，或在该格有对方棋子时吃子）。
+        </p>
+
+        <h4>先手阵营</h4>
+
+        <ul>
+          <li>第1行：香车、桂马、银将、公主、王将、银将、桂马、香车。</li>
+          <li>第2行：一枚角行和一枚飞车；其余格子为空。</li>
+          <li>第3行：每格各一枚步兵。</li>
+        </ul>
+
+        <h4>后手阵营</h4>
+
+        <ul>
+          <li>第8行：香车、桂马、银将、公主、王将、银将、桂马、香车。</li>
+          <li>第7行：一枚飞车和一枚角行；其余格子为空。</li>
+          <li>第6行：每格各一枚步兵。</li>
+        </ul>
+
+        <h3>让子棋</h3>
+
+        <p>
+          让子棋是指棋力较强的一方在开局时主动给予对手一定的子力优势，
+          以平衡双方的获胜机会。
+        </p>
+
+        <h4>让子方式</h4>
+
+        <p>
+          在日本王棋中，这种优势通常表现为允许较弱的一方在开局前
+          将一枚或多枚棋子预先升变。
+        </p>
+
+        <h4>示例</h4>
+
+        <p>
+          在下面的示例中，后手（棋力较强者）给予先手（棋力较弱者）让子优势，
+          允许先手以飞车和角行已升变的状态开局。
+        </p>
+
+        <table class="squares">
+          <caption>
+            先手以角行和飞车已升变的状态开局。
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"><img class="piece" draggable="true" data-code="o:l" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="b8"><img class="piece" draggable="true" data-code="o:n" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="c8"><img class="piece" draggable="true" data-code="o:s" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d8"><img class="piece" draggable="true" data-code="o:i" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e8"><img class="piece" draggable="true" data-code="o:k^" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square" data-coordinate="f8"><img class="piece" draggable="true" data-code="o:s" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="g8"><img class="piece" draggable="true" data-code="o:n" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="h8"><img class="piece" draggable="true" data-code="o:l" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/lance.svg" alt="香车"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"><img class="piece" draggable="true" data-code="o:r" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/rook.svg" alt="飞车"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"><img class="piece" draggable="true" data-code="o:b" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/bishop.svg" alt="角行"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="b6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="d6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="e6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="g6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="h6"><img class="piece" draggable="true" data-code="o:p" data-style="ogi" data-side="second" src="img/sides/second/representations/eastern/pawn.svg" alt="步兵"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="b3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="d3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="e3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="f3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="g3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="h3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"><img class="piece" draggable="true" data-code="O:+B" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-bishop.svg" alt="龙马"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"><img class="piece" draggable="true" data-code="O:+R" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-rook.svg" alt="龙王"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="b1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="c1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d1"><img class="piece" draggable="true" data-code="O:I" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e1"><img class="piece" draggable="true" data-code="O:K^" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square" data-coordinate="f1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="g1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="h1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>棋子走法</h3>
+
+        <p>
+          每回合，玩家可以选择移动棋盘上已有的一枚棋子
+          （移动可能导致升变、吃子，或两者兼有），
+          或者将之前吃掉的棋子重新打入棋盘。
+          双方轮流行棋：一方走完一步后，轮到另一方行棋。
+        </p>
+
+        <h4>王将</h4>
+
+        <table class="squares">
+          <caption>
+            王将的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square focus" data-coordinate="e3"></td>
+              <td class="square focus" data-coordinate="f3"></td>
+              <td class="square focus" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square focus" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"><img class="piece" draggable="true" data-code="O:K^" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square focus" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square focus" data-coordinate="e1"></td>
+              <td class="square focus" data-coordinate="f1"></td>
+              <td class="square focus" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>王将</strong>（<code lang="ja">玉</code>/<code lang="ja">王</code>）每步只能移动一格，
+          可向任意方向移动（前、后、左、右或斜向），
+          吃子方式相同。
+        </p>
+
+        <h4>公主</h4>
+
+        <table class="squares">
+          <caption>
+            公主的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square focus" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square focus" data-coordinate="b7"></td>
+              <td class="square focus" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square focus" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square focus" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"><img class="piece" draggable="true" data-code="O:I" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square focus" data-coordinate="b4"></td>
+              <td class="square focus" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square focus" data-coordinate="e4"></td>
+              <td class="square focus" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square focus" data-coordinate="b3"></td>
+              <td class="square focus" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square focus" data-coordinate="e3"></td>
+              <td class="square focus" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square focus" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square focus" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>公主</strong>（<code lang="ja">姫</code>）的走法结合了角行和桂马的能力。
+          但与本游戏中的<strong>桂马</strong>（只能向前跳跃）不同，公主可以向八个方向跳跃。
+          因此，她既可以沿对角线滑行任意距离（不能越过其他棋子），
+          也可以按"L"形跳跃（先走两格再垂直走一格），可朝任意方向，
+          吃子方式相同。
+        </p>
+
+        <h4>升变公主</h4>
+
+        <table class="squares">
+          <caption>
+            升变公主的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square focus" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square focus" data-coordinate="b7"></td>
+              <td class="square focus" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square focus" data-coordinate="c6"></td>
+              <td class="square focus" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square focus" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square focus" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"><img class="piece" draggable="true" data-code="O:+I" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-princess.svg" alt="升变公主"></td>
+              <td class="square focus" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square focus" data-coordinate="b4"></td>
+              <td class="square focus" data-coordinate="c4"></td>
+              <td class="square focus" data-coordinate="d4"></td>
+              <td class="square focus" data-coordinate="e4"></td>
+              <td class="square focus" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square focus" data-coordinate="b3"></td>
+              <td class="square focus" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square focus" data-coordinate="e3"></td>
+              <td class="square focus" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square focus" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square focus" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>升变公主</strong>（<code lang="ja">神</code>）保留公主的所有走法
+          （角行的斜向移动和桂马的跳跃），
+          并额外获得沿直线移动一格的能力，可向前、后、左、右移动，
+          吃子方式相同。
+        </p>
+
+        <h4>飞车</h4>
+
+        <table class="squares">
+          <caption>
+            飞车的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square focus" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square focus" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square focus" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a3"></td>
+              <td class="square focus" data-coordinate="b3"></td>
+              <td class="square focus" data-coordinate="c3"></td>
+              <td class="square focus" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"><img class="piece" draggable="true" data-code="O:R" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/rook.svg" alt="飞车"></td>
+              <td class="square focus" data-coordinate="f3"></td>
+              <td class="square focus" data-coordinate="g3"></td>
+              <td class="square focus" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square focus" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square focus" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>飞车</strong>（<code lang="ja">飛</code>）可沿横向或纵向直线移动任意格数，
+          但不能越过其他棋子。通过移动到对方棋子所在的格子来吃子。
+        </p>
+
+        <h4>龙王</h4>
+
+        <table class="squares">
+          <caption>
+            龙王的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square focus" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square focus" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square focus" data-coordinate="d4"></td>
+              <td class="square focus" data-coordinate="e4"></td>
+              <td class="square focus" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a3"></td>
+              <td class="square focus" data-coordinate="b3"></td>
+              <td class="square focus" data-coordinate="c3"></td>
+              <td class="square focus" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"><img class="piece" draggable="true" data-code="O:+R" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-rook.svg" alt="龙王"></td>
+              <td class="square focus" data-coordinate="f3"></td>
+              <td class="square focus" data-coordinate="g3"></td>
+              <td class="square focus" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square focus" data-coordinate="d2"></td>
+              <td class="square focus" data-coordinate="e2"></td>
+              <td class="square focus" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square focus" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>龙王</strong>（<code lang="ja">龍</code>）保留飞车的所有走法，
+          并额外获得沿对角线移动一格的能力，可朝任意方向，
+          吃子方式相同。
+        </p>
+
+        <h4>角行</h4>
+
+        <table class="squares">
+          <caption>
+            角行的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square focus" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square focus" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square focus" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square focus" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"><img class="piece" draggable="true" data-code="O:B" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/bishop.svg" alt="角行"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square focus" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square focus" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square focus" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square focus" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square focus" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>角行</strong>（<code lang="ja">角</code>）可沿对角线移动任意格数，
+          但不能越过其他棋子。通过移动到对方棋子所在的格子来吃子。
+        </p>
+
+        <h4>龙马</h4>
+
+        <table class="squares">
+          <caption>
+            龙马的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square focus" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square focus" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square focus" data-coordinate="c7"></td>
+              <td class="square focus" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square focus" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"><img class="piece" draggable="true" data-code="O:+B" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-bishop.svg" alt="龙马"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square focus" data-coordinate="c5"></td>
+              <td class="square focus" data-coordinate="d5"></td>
+              <td class="square focus" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square focus" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square focus" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square focus" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square focus" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>龙马</strong>（<code lang="ja">馬</code>）保留角行的所有走法，
+          并额外获得沿横向或纵向移动一格的能力。
+          吃子方式相同。
+        </p>
+
+        <h4>银将</h4>
+
+        <table class="squares">
+          <caption>
+            银将的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square focus" data-coordinate="c6"></td>
+              <td class="square focus" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square focus" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square focus" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>银将</strong>（<code lang="ja">銀</code>）可斜向移动一格（向前或向后），
+          或向正前方移动一格，共有五个可能的目标格。
+          它不能横向移动，也不能向正后方后退。
+        </p>
+
+        <h4>升变银将</h4>
+
+        <table class="squares">
+          <caption>
+            升变银将的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="O:+S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-silver-general.svg" alt="升变银将"></td>
+              <td class="square focus" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square focus" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>升变银将</strong>（<code lang="ja">全</code>）可沿横向或纵向移动一格，
+          或斜向向前移动一格，共有六个可能的目标格。
+          它不能斜向向后移动。
+        </p>
+
+        <h4>桂马</h4>
+
+        <table class="squares">
+          <caption>
+            桂马的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square focus" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>桂马</strong>（<code lang="ja">桂</code>）以跳跃方式移动：
+          先向前走两格，再向左或向右走一格，一步完成。
+          它只能向前移动，因此最多只有两个目标格。
+          与西洋棋的骑士不同，它不能向侧面或向后移动。
+          它与<strong>公主</strong>是仅有的两种可以越过其他棋子的棋子：
+          它不会被前方的棋子阻挡，但也无法吃掉那枚棋子。
+        </p>
+
+        <h4>升变桂马</h4>
+
+        <table class="squares">
+          <caption>
+            升变桂马的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="O:+N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-knight.svg" alt="升变桂马"></td>
+              <td class="square focus" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square focus" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>升变桂马</strong>（<code lang="ja">圭</code>）的走法与升变银将完全相同。
+          与未升变的桂马不同，它不再能够越过其他棋子。
+        </p>
+
+        <h4>香车</h4>
+
+        <table class="squares">
+          <caption>
+            香车的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square focus" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square focus" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square focus" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square focus" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>香车</strong>（<code lang="ja">香</code>）只能沿所在列向正前方直线移动任意格数。
+          它不能后退，也不能横向移动，且不能越过其他棋子。
+          通过移动到对方棋子所在的格子来吃子。
+        </p>
+
+        <h4>升变香车</h4>
+
+        <table class="squares">
+          <caption>
+            升变香车的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="O:+L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-lance.svg" alt="升变香车"></td>
+              <td class="square focus" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square focus" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>升变香车</strong>（<code lang="ja">杏</code>）的走法与<strong>升变银将</strong>完全相同。
+        </p>
+
+        <h4>步兵</h4>
+
+        <table class="squares">
+          <caption>
+            步兵的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square" data-coordinate="e7"></td>
+              <td class="square" data-coordinate="f7"></td>
+              <td class="square" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"></td>
+              <td class="square" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square focus" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>步兵</strong>（<code lang="ja">歩</code>）只能沿所在列向正前方移动一格，
+          且永远不能后退。吃子方式相同：向前移动一格到对方棋子所在的格子。
+        </p>
+
+        <h4>升变步兵</h4>
+
+        <table class="squares">
+          <caption>
+            升变步兵的走法
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square" data-coordinate="a8"></td>
+              <td class="square" data-coordinate="b8"></td>
+              <td class="square" data-coordinate="c8"></td>
+              <td class="square" data-coordinate="d8"></td>
+              <td class="square" data-coordinate="e8"></td>
+              <td class="square" data-coordinate="f8"></td>
+              <td class="square" data-coordinate="g8"></td>
+              <td class="square" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a7"></td>
+              <td class="square" data-coordinate="b7"></td>
+              <td class="square" data-coordinate="c7"></td>
+              <td class="square" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a6"></td>
+              <td class="square" data-coordinate="b6"></td>
+              <td class="square" data-coordinate="c6"></td>
+              <td class="square" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square" data-coordinate="f6"><img class="piece" draggable="true" data-code="O:+P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/promoted-pawn.svg" alt="升变步兵"></td>
+              <td class="square focus" data-coordinate="g6"></td>
+              <td class="square" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square focus" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"></td>
+              <td class="square" data-coordinate="b3"></td>
+              <td class="square" data-coordinate="c3"></td>
+              <td class="square" data-coordinate="d3"></td>
+              <td class="square" data-coordinate="e3"></td>
+              <td class="square" data-coordinate="f3"></td>
+              <td class="square" data-coordinate="g3"></td>
+              <td class="square" data-coordinate="h3"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"></td>
+              <td class="square" data-coordinate="b1"></td>
+              <td class="square" data-coordinate="c1"></td>
+              <td class="square" data-coordinate="d1"></td>
+              <td class="square" data-coordinate="e1"></td>
+              <td class="square" data-coordinate="f1"></td>
+              <td class="square" data-coordinate="g1"></td>
+              <td class="square" data-coordinate="h1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>升变步兵</strong>（<code lang="ja">と</code>）的走法与
+          <strong>升变银将</strong>（<code lang="ja">全</code>）完全相同：
+          可向前、后、左、右移动一格，或斜向向前移动一格，
+          但不能斜向向后移动。
+        </p>
+
+        <h3>升变</h3>
+
+        <p>
+          玩家的<strong>升变区</strong>是指对方阵营最靠近自己的三行，
+          即对局开始时对方棋子所摆放的区域。
+          当一枚棋子进入该区域、在该区域内移动或离开该区域时
+          （但打入时不适用），可以在该步结束时选择升变。
+          升变通过将棋子翻转至背面来实现，显示其升变后的汉字。
+        </p>
+
+        <p>
+          但在某些情况下，升变是强制性的：如果一枚棋子到达某个格子后，
+          若不升变则在之后的回合中将无法进行任何合法移动，
+          则该棋子必须升变。
+        </p>
+
+        <table class="squares">
+          <caption>
+            先手的升变区（黄色区域）
+          </caption>
+
+          <tbody>
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a8"></td>
+              <td class="square focus" data-coordinate="b8"></td>
+              <td class="square focus" data-coordinate="c8"></td>
+              <td class="square focus" data-coordinate="d8"></td>
+              <td class="square focus" data-coordinate="e8"></td>
+              <td class="square focus" data-coordinate="f8"></td>
+              <td class="square focus" data-coordinate="g8"></td>
+              <td class="square focus" data-coordinate="h8"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a7"></td>
+              <td class="square focus" data-coordinate="b7"></td>
+              <td class="square focus" data-coordinate="c7"></td>
+              <td class="square focus" data-coordinate="d7"></td>
+              <td class="square focus" data-coordinate="e7"></td>
+              <td class="square focus" data-coordinate="f7"></td>
+              <td class="square focus" data-coordinate="g7"></td>
+              <td class="square focus" data-coordinate="h7"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square focus" data-coordinate="a6"></td>
+              <td class="square focus" data-coordinate="b6"></td>
+              <td class="square focus" data-coordinate="c6"></td>
+              <td class="square focus" data-coordinate="d6"></td>
+              <td class="square focus" data-coordinate="e6"></td>
+              <td class="square focus" data-coordinate="f6"></td>
+              <td class="square focus" data-coordinate="g6"></td>
+              <td class="square focus" data-coordinate="h6"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a5"></td>
+              <td class="square" data-coordinate="b5"></td>
+              <td class="square" data-coordinate="c5"></td>
+              <td class="square" data-coordinate="d5"></td>
+              <td class="square" data-coordinate="e5"></td>
+              <td class="square" data-coordinate="f5"></td>
+              <td class="square" data-coordinate="g5"></td>
+              <td class="square" data-coordinate="h5"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a4"></td>
+              <td class="square" data-coordinate="b4"></td>
+              <td class="square" data-coordinate="c4"></td>
+              <td class="square" data-coordinate="d4"></td>
+              <td class="square" data-coordinate="e4"></td>
+              <td class="square" data-coordinate="f4"></td>
+              <td class="square" data-coordinate="g4"></td>
+              <td class="square" data-coordinate="h4"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="b3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="c3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="d3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="e3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="f3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="g3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+              <td class="square" data-coordinate="h3"><img class="piece" draggable="true" data-code="O:P" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/pawn.svg" alt="步兵"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a2"></td>
+              <td class="square" data-coordinate="b2"><img class="piece" draggable="true" data-code="O:B" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/bishop.svg" alt="角行"></td>
+              <td class="square" data-coordinate="c2"></td>
+              <td class="square" data-coordinate="d2"></td>
+              <td class="square" data-coordinate="e2"></td>
+              <td class="square" data-coordinate="f2"></td>
+              <td class="square" data-coordinate="g2"><img class="piece" draggable="true" data-code="O:R" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/rook.svg" alt="飞车"></td>
+              <td class="square" data-coordinate="h2"></td>
+            </tr>
+
+            <tr class="rank">
+              <td class="square" data-coordinate="a1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+              <td class="square" data-coordinate="b1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="c1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="d1"><img class="piece" draggable="true" data-code="O:I" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/princess.svg" alt="公主"></td>
+              <td class="square" data-coordinate="e1"><img class="piece" draggable="true" data-code="O:K^" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/king.svg" alt="王将"></td>
+              <td class="square" data-coordinate="f1"><img class="piece" draggable="true" data-code="O:S" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/silver-general.svg" alt="银将"></td>
+              <td class="square" data-coordinate="g1"><img class="piece" draggable="true" data-code="O:N" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/knight.svg" alt="桂马"></td>
+              <td class="square" data-coordinate="h1"><img class="piece" draggable="true" data-code="O:L" data-style="ogi" data-side="first" src="img/sides/first/representations/eastern/lance.svg" alt="香车"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>吃子与持驹</h3>
+
+        <p>
+          当一枚棋子被吃掉时，它并不会永久退出对局：
+          它会从棋盘上移除并放入吃掉它的玩家的储备区。
+          此时称该棋子<strong>在手</strong>。
+          在日语中，这些棋子被称为
+          <ruby>持ち駒<rp>(</rp><rt>mochigoma</rt><rp>)</rp></ruby>或
+          <ruby>手駒<rp>(</rp><rt>tegoma</rt><rp>)</rp></ruby>。
+        </p>
+
+        <p>
+          一般规则是，被吃的棋子在被俘获时<strong>恢复为未升变状态</strong>。
+          因此，被吃的升变棋子会立即在玩家手中降级
+          （例如，升变银将恢复为未升变的银将）。
+        </p>
+
+        <p>
+          <strong>例外：王之特权。</strong>
+          当由王将吃掉一枚升变棋子时，玩家可以选择：
+          要么像通常一样将其降级，要么行使"王之特权"，
+          <strong>保持其升变状态</strong>放入手中。
+        </p>
+
+        <p>
+          除了移动棋盘上已有的棋子外，玩家在自己的回合也可以
+          <strong>打入</strong>一枚手中的棋子：将其放置在一个空格上，
+          该棋子随即成为场上的活跃棋子。
+          打入会保持棋子在手中时的<strong>确切状态</strong>
+          （升变或未升变）。每次打入都算作一个完整的着法。
+        </p>
+
+        <p>
+          打入不能用于吃掉对方棋子（目标格必须为空），
+          也不能立即升变，即使打入到升变区也不行。
+          将未升变的持驹打入升变区不会触发升变；
+          但如果持驹本身已是升变状态，则打入后仍保持升变状态。
+          从此刻起，该棋子可以在之后的回合中吃子和升变，
+          与任何其他在场棋子无异。
+        </p>
+
+        <h4>打入限制</h4>
+
+        <p>
+          某些棋子不能打入到棋盘的任意位置。
+          以下限制适用：
+        </p>
+
+        <ul>
+          <li>
+            <strong>无处可去的棋子
+              （<ruby>行き所のない駒<rp>(</rp><rt>ikidokorononaikoma</rt><rp>)</rp></ruby>）：</strong>
+            未升变的香车和未升变的桂马不能打入到最后一行（先手为第8行，后手为第1行），
+            未升变的桂马也不能打入到倒数第二行（先手为第7行，后手为第2行）。
+            在这些位置上，由于它们只能向前移动的特性，
+            在之后的回合中将无法进行任何合法移动。
+          </li>
+          <li>
+            <strong>未升变的步兵：</strong>
+            未升变的步兵永远不能被打入。
+            因此，被吃的未升变步兵虽然留在手中，但无法使用（无法重新进入棋盘）。
+            但是，如果王将吃掉一枚升变步兵，且玩家通过"王之特权"选择保持其升变状态，
+            则该升变步兵之后可以被打入。
+          </li>
+        </ul>
+
+        <h3>将军</h3>
+
+        <p>
+          当王将处于<strong>被将军</strong>
+          （<ruby>王手<rp>(</rp><rt>ōte</rt><rp>)</rp></ruby>）的状态时，
+          意味着如果玩家不作出应对，对方下一步就可以吃掉王将。
+          在日本王棋中，将军只是一种局面信息：无需宣告，
+          而且将自己的王将置于被将军状态或保持被将军状态都不违规。
+        </p>
+
+        <p>
+          因此，如果玩家没有注意到自己的王将受到威胁，对手可以在下一步
+          将其吃掉并<strong>立即赢得比赛</strong>。
+          当无论如何防守，王将被吃都不可避免时，
+          称为<strong>将死</strong>
+          （<ruby>王手詰め<rp>(</rp><rt>ōte-zume</rt><rp>)</rp></ruby>）。
+        </p>
+
+        <h3>对局结束</h3>
+
+        <p>
+          大多数日本王棋对局以<strong>吃掉对方王将</strong>
+          （通常是在将死情况下）或处于劣势的玩家<strong>认输</strong>而结束。
+          由于被吃的棋子仍保留在手中并可打入，
+          玩家通常有足够的棋力来准备决定性的进攻。
+        </p>
+
+        <p>
+          对局也可能因玩家走出<strong>违规着法</strong>而结束：
+          对局立即终止，犯规的玩家<strong>判负</strong>。
+        </p>
+
+        <p>
+          以下任何违反规则的行为都被视为<strong>违规着法</strong>
+          （根据本页规则的完整列表）：
+        </p>
+
+        <ul>
+          <li>走出<strong>移动</strong>或<strong>打入</strong>以外的着法。</li>
+          <li>将棋子移动到棋盘外，或移动到该棋子类型及状态（升变/未升变）不允许到达的格子。</li>
+          <li>对于长距离棋子（飞车、角行、香车），<strong>穿越</strong>其他棋子：移动路径上必须畅通无阻直至目标格。</li>
+          <li>将棋子移动到己方棋子占据的格子上。</li>
+          <li>将棋子打入到非空格子上（打入不能吃子）。</li>
+          <li>将棋子打入到禁止打入的格子：
+            <ul>
+              <li>未升变的香车和未升变的桂马打入到最后一行（先手为第8行，后手为第1行），</li>
+              <li>未升变的桂马打入到倒数第二行（先手为第7行，后手为第2行），</li>
+              <li>未升变的步兵（棋盘任何位置）。</li>
+            </ul>
+          </li>
+          <li>在不允许升变时进行升变（例如在打入时）。</li>
+          <li>在<strong>强制升变</strong>时未进行升变，即当棋子到达某个格子后，若不升变则在之后的回合中将无法进行任何合法移动（典型情况：步兵或香车在最后一行，桂马在最后两行）。</li>
+          <li>走出违反下述<strong>禁止重复</strong>规则的着法。</li>
+        </ul>
+
+        <p>
+          <strong>禁止重复</strong>着法。
+          如果一步棋完全重复了对局中已经走过的着法
+          ——即涉及同一枚棋子（或在打入的情况下，同类型同状态的棋子）、
+          同一起始格、同一目标格以及同一升变选择——
+          且所产生的局面与之前出现过的局面完全相同，则该着法违规。
+          所谓<em>局面</em>，是指棋盘上所有棋子及其状态（升变与否）、
+          双方手中持有的棋子（及其状态），以及当前行棋方。
+          走出此类重复着法的玩家<strong>立即判负</strong>。
+        </p>
+
+        <p>
+          最后，如果<strong>双方各走50步</strong>（即<strong>100个半步</strong>）
+          <strong>期间没有任何吃子</strong>且<strong>没有任何未升变步兵的移动</strong>，
+          对局可宣布和棋。
+        </p>
+      </section>
+
+      <section id="wenhua-xushi-yu-dushi-chuanshuo">
+        <h2>文化叙事与都市传说</h2>
+
+        <p>
+          日本王棋保留了将棋的基本原理，但与将棋不同的是，
+          它以当代叙事而非有据可查的历史起源来区分自身。
+          该游戏由法国作家Cyril Veltin正式定名，他
+          <a href="https://cyrilvelt.in/posts/2025-02-15/a-strange-encounter-at-utsubo-park/" hreflang="en" rel="external related" title="A Strange Encounter at Utsubo Park">讲述</a>
+          了在一个夏日傍晚，于大阪的一个公园里观看一场奇异对局时发现这个游戏的经历。
+        </p>
+
+        <p>
+          这一文化叙事的核心是一个都市传说，
+          涉及一位名叫
+          <a href="https://zh.komayo.page/" hreflang="zh" rel="external related" title="日本王棋的棋子女妖">棋魅女</a>的妖怪，
+          据说她有时会在月光下邀请棋手进行一局日本王棋对弈。
+        </p>
+
+        <picture>
+          <source type="image/webp" srcset="img/komayo-moonlit-ogi-game-legend-small.webp" media="(max-width: 512px)" height="512" width="512">
+          <source type="image/webp" srcset="img/komayo-moonlit-ogi-game-legend-large.webp" media="(min-width: 512px)" height="1024" width="1024">
+
+          <img
+            src="img/komayo-moonlit-ogi-game-legend-fallback.jpg"
+            alt="神秘的棋魅女在满月下邀请棋手进行一场神秘的日本王棋对弈。"
+            title="棋魅女传说：满月下令人着迷的日本王棋对弈"
+            height="1024"
+            width="1024">
+        </picture>
+
+        <p>
+          有些棋手声称曾见过她。
+          也有人不以为然。
+        </p>
+      </section>
+    </article>
+
+    <nav aria-label="语言选择">
+      <p>其他语言版本：</p>
+
+      <ul>
+        <li><a title="切换到英语" href="https://en.ogi.page/" lang="en">English</a></li>
+        <li><a title="切换到法语" href="https://fr.ogi.page/" lang="fr">Français</a></li>
+        <li><a title="切换到日语" href="https://ja.ogi.page/" lang="ja">日本語</a></li>
+        <li><a title="切换到泰语" href="https://th.ogi.page/" lang="th">ภาษาไทย</a></li>
+        <!-- <li><a title="切换到中文" href="https://zh.ogi.page/" lang="zh">中文</a></li> -->
+      </ul>
+    </nav>
+
+    <footer>
+      <p>
+        日本王棋的游戏规则、名称及标志已自愿置于公共领域。
+        任何人均可不受限制地重新使用、修改或传播。
+      </p>
+    </footer>
+  </body>
+</html>
